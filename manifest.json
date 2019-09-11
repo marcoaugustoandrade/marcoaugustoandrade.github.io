@@ -1,0 +1,16 @@
+{
+  "name": "Prof.º Marco Andrade",
+  "short_name": "Prof.º Marco Andrade",
+  "lang": "pt-BR",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#0C1217",
+  "background_color": "#0C1217",
+  "icons": [
+    {
+      "src": "assets/images/favicon/android-chrome-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    }
+  ]
+}
