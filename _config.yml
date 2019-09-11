@@ -67,7 +67,7 @@ exclude:
   - package-lock.json
   - node_modules
   - gulpfile.js
-  - .eslintrc.json
+  - _js
   - .editorconfig
   - Gemfile
   - Gemfile.lock

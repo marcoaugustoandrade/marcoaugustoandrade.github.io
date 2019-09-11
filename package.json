@@ -1,0 +1,23 @@
+{
+  "name": "marcoaugustoandrade.github.io",
+  "version": "1.0.0",
+  "description": "Este repositório contém o Jekyll, sistema gerenciador de conteúdo estático, do blog [http://marcoandra.de](http://marcoandra.de).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcoaugustoandrade/marcoaugustoandrade.github.io.git"
+  },
+  "author": "Marco Andrade",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/marcoaugustoandrade/marcoaugustoandrade.github.io/issues"
+  },
+  "homepage": "https://github.com/marcoaugustoandrade/marcoaugustoandrade.github.io#readme",
+  "dependencies": {
+    "gulp": "^4.0.2",
+    "gulp-minify": "^3.1.0"
+  }
+}
