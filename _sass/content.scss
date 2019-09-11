@@ -1,0 +1,50 @@
+/* content */
+.content{
+  padding: 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 4em;
+}
+.content h2{
+  padding-top: 1em;
+}
+.content ul{
+  margin: 2em;
+}
+.content ul li{
+  padding: 0.5em 0;
+}
+.content p{
+  padding: 0.5em 0;
+  line-height: 1.5;
+}
+.content__autor{
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.content__title{
+  text-align: center;
+  font-size: 36px;
+  padding: 1em;
+  font-family: 'Roboto', sans-serif;
+}
+.content__date{
+  text-align: center;
+  padding-bottom: 1em;
+}
+.content_code{
+  padding: 1em !important;
+}
+
+/* creative commons */
+.license{
+  padding: 1em;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 4em;
+}
+.license__text{
+  font-size: 12px;
+  padding-top: 1em;
+}

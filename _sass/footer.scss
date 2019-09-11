@@ -1,0 +1,40 @@
+/* cookies */
+.cookies{
+  font-size: 12px;
+  padding: 1em;
+  position: fixed;
+  bottom: 4.3em;
+  left: 0;
+  right: 0;
+}
+.cookies a{
+  color: #EB3A3A;
+  text-decoration: underline;
+}
+.cookies__text{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.cookies__accept{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+.cookies__button{
+  color: #F2F2F2;
+  background-color: #EB3A3A;
+  cursor: pointer;
+  border: 0;
+  padding: 0.5em 1em;
+  display: block;
+}
+.cookies__button:hover{
+  background-color: rgba(235, 58, 58, 0.8);
+}
+
+/* Diqus */
+.container-disqus{
+  max-width: 1200px;
+  margin: 0 auto;
+}

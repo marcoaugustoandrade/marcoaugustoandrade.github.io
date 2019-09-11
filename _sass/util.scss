@@ -1,0 +1,43 @@
+* { 
+  margin: 0; padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  box-sizing: border-box;
+}
+::selection{
+  color: #F2F2F2;
+  background-color: #EB3A3A;
+}
+
+/* links */
+a{
+  color: #EB3A3A;
+}
+a:hover{
+  color: rgba(235, 58, 58, 0.842);
+}
+
+/* messages */
+.alert-blue{
+  border-left: 0.5em #337ab7 solid;
+  background-color: rgba(51,122,183, 0.801);
+  color: white;
+  padding: 1em;
+}
+.alert-green{
+  border-left: 0.5em #5cb85c solid;
+  background-color: rgba(92,184,92, 0.801);
+  color: white;
+  padding: 1em;
+}
+.alert-red{
+  border-left: 0.5em #d9534f solid;
+  background-color: rgba(217,83,79, 0.801);
+  color: white;
+  padding: 1em;
+}
+.alert-yellow{
+  border-left: 0.5em #e7da5e solid;
+  background-color: rgba(231,218,94, 0.801);
+  color: black;
+  padding: 1em;
+}

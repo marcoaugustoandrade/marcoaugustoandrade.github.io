@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+      {% if page.title %} {{ page.title }}
+      {% else %} {{ site.title }}
+      {% endif %}
+  </title>
+  {% include favicon.html %}
+  {% include styles.html %}
+</head>
+<body>
+  
+  {% include progressbar.html %}
+  {% include header.html %}
+  
+  <main class="content" markdown="1">
+    
+    <img src="/assets/images/marco.jpg" alt="Professor Marco Antonio Andrade" class="content__autor">
+    
+    <h1 class="content__title">{{page.title}}</h1>
+    
+    {% for post in site.posts %}	
+    <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+    <p>{{ post.date | date: "%d/%m/%Y" }}</p>			
+    {% endfor %}
+    
+  </main>
+  
+  {% include footer.html %}
+  {% include cookies.html %}
+  {% include analytics.html %}
+  {% include scripts.html %}
+  {% include search.html %}
+</body>
+</html>

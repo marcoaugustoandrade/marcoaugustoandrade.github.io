@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>
+      {% if page.title %} {{ page.title }}
+      {% else %} {{ site.title }}
+      {% endif %}
+  </title>
+  {% include favicon.html %}
+  {% include styles.html %}
+</head>
+<body>
+  
+  {% include progressbar.html %}
+  {% include header.html %}
+  
+  <main class="content" markdown="1">
+    <img src="/assets/images/marco.jpg" alt="Professor Marco Antonio Andrade" class="content__autor">
+    
+    <h1 class="content__title">{{page.title}}</h1>
+    
+    <div class="content__date">
+      {{page.date | date: "%d/%m/%Y"}} - 
+      <span class="content__readingtime" title="Tempo estimado para leitura">
+        {% assign words = content | number_of_words %}
+        {% if words < 360 %}
+          1 min de leitura
+        {% else %}
+          {{ words | divided_by:180 }} mins de leitura
+        {% endif %}
+      </span>
+    </div>
+    
+    <div>{{content}}</div>
+  </main>
+  
+  {% include footer.html %}
+  {% include cookies.html %}
+  {% include analytics.html %}
+  {% include scripts.html %}
+  {% include disqus.html %}
+  {% include search.html %}
+</body>
+</html>
