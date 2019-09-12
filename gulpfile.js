@@ -2,7 +2,7 @@ const gulp = require('gulp')
 const minify = require('gulp-minify')
 
 gulp.task('minify', () => {
-  return gulp.src('_js/functions.js', {allowEmpty: true})
+  return gulp.src('_js/scripts.js', {allowEmpty: true})
     .pipe(minify({noSource: true}))
     .pipe(gulp.dest('assets/js/'))
 })

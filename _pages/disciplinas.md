@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Disciplinas
-permalink: /disciplinas/
+permalink: /disciplinas
 date:   2019-08-09 16:12:00 -0400
 ---
 

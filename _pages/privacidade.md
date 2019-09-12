@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Privacidade
-permalink: /privacidade/
+permalink: /privacidade
 ---
 
 
