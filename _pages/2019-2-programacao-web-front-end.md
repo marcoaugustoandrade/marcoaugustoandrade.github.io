@@ -2,7 +2,6 @@
 layout: page
 title: Programação Web Front-end
 permalink: /2019-2-programacao-web-front-end
-date:   2019-08-09 16:12:00 -0400
 ---
 
 ## Lista de recursos HTML e CSS
@@ -23,6 +22,7 @@ date:   2019-08-09 16:12:00 -0400
 * [Flexbox Froggy](https://flexboxfroggy.com/)
 * [Caniuse](https://caniuse.com)
 * [Protótipo do site Minhas Séries](https://www.figma.com/file/BCeiBCoOgc0PIWSdLLWDM3qR/S%C3%A9ries?node-id=0%3A1)
+* [Curso em vídeo: Introdução ao JavaScript](https://www.youtube.com/watch?v=1-w1RfGIov4&list=PLHz_AreHm4dlsK3Nr9GVvXCbpQyHQl1o1)
 
 ## Avaliação da disciplina
 ### Trabalho 1
@@ -84,10 +84,10 @@ Apresentação no dia **11/09/2019** com valor de **10 pontos**.
 
 ## Trabalho 4
 Cada grupo irá implementar novas funcionalidades no aplicativo de gerenciamento de tarefas.
-Grupo 1:
-Grupo 2:
-Grupo 3:
-Grupo 4:
+* Grupo 1:
+* Grupo 2:
+* Grupo 3:
+* Grupo 4:
 
 As funcionalidades devem ser integradas com o repositório **a definir** com o uso de Pull Requests.
 
