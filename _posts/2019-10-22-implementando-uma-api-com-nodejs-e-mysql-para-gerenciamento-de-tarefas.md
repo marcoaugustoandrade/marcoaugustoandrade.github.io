@@ -1,3 +1,10 @@
+---
+layout: post
+title: "Implementando uma API com Nodejs e MySQL para gerenciamento de tarefas"
+date:   2019-09-03 10:52:00 -0400
+categories: javascript
+---
+
 ## Pré-requisitos
 Para implementar este tutorial é necessário um editor de texto (estou utilizando o VS Code), [Git](https://git-scm.com/), [Nodejs](https://nodejs.org/en/) e [MariaDB](https://mariadb.org/). Também será utilizado o cURL, Postman e um navegador (Chrome ou Firefox).
 
