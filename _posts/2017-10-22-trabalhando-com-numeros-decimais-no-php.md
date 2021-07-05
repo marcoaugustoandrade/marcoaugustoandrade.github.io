@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Formatando números decimais no PHP"
-date:   2017-10-22 23:21:53 -0400
+title: Formatando números decimais no PHP
+author: Marco Andrade
+date: '2017-10-22 23:21:53 -0400'
 categories: php
 ---
 
