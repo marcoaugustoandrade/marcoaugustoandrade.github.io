@@ -16,8 +16,13 @@
   }
 }
 
+::selection {
+  background: #933a8a;
+
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
+  color: rgb(var(--foreground-rgb));  
   background: linear-gradient(
       to bottom,
       transparent,

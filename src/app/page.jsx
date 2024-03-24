@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
     <main className="bg-gradient-to-r from-[#392C59] to-[#3A6193] text-gray-50 h-screen flex justify-center border-[#392E5B] border-t-4">
