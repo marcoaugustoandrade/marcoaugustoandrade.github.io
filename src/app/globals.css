@@ -3,17 +3,9 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  color-scheme: dark;
+  --foreground-rgb: 241, 245, 249;
+  --background-rgb: 17, 18, 34;
 }
 
 ::selection {
@@ -22,13 +14,21 @@
 }
 
 body {
-  color: rgb(var(--foreground-rgb));  
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  color: rgb(var(--foreground-rgb));
+  background-color: rgb(var(--background-rgb));
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='1' height='1' fill='rgba(255,255,255,0.12)'/%3E%3C/svg%3E");
+  opacity: 0.08;
+  mix-blend-mode: screen;
+  z-index: 0;
 }
 
 @layer utilities {
