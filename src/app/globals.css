@@ -5,30 +5,39 @@
 :root {
   color-scheme: dark;
   --foreground-rgb: 241, 245, 249;
-  --background-rgb: 17, 18, 34;
+  --background-rgb: 57, 44, 89;
 }
 
 ::selection {
-  background: #f6d32d;
-  color: #010101;
+  background: #7dd3fc;
+  color: #1f1a2c;
 }
 
 body {
   min-height: 100vh;
   color: rgb(var(--foreground-rgb));
   background-color: rgb(var(--background-rgb));
-  position: relative;
 }
 
-body::before {
+/* Ruído sutil sobre o gradiente para tirar o aspecto "chapado". */
+body::after {
   content: "";
   position: fixed;
   inset: 0;
   pointer-events: none;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Crect width='1' height='1' fill='rgba(255,255,255,0.12)'/%3E%3C/svg%3E");
-  opacity: 0.08;
-  mix-blend-mode: screen;
-  z-index: 0;
+  z-index: 10;
+  opacity: 0.06;
+  mix-blend-mode: soft-light;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
 }
 
 @layer utilities {

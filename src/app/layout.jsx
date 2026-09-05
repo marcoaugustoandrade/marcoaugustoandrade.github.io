@@ -3,9 +3,19 @@ import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-body" });
 
+const description =
+  "Professor EBTT no IFRO Campus Vilhena. Engenharia de Software, Programação e Sistemas de Informação.";
+
 export const metadata = {
   title: "Marco Andrade",
-  description: "Marco Andrade",
+  description,
+  openGraph: {
+    title: "Marco Andrade",
+    description,
+    type: "profile",
+    locale: "pt_BR",
+    images: [{ url: "/marco.png", width: 544, height: 544, alt: "Foto de Marco Andrade" }],
+  },
   icons: {
     icon: [
       {

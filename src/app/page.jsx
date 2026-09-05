@@ -2,8 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { Github, Gitlab, Linkedin, Mail } from "lucide-react";
 
+const role = "Professor EBTT · IFRO Campus Vilhena";
+
 const summary =
-  "Professor EBTT no IFRO Campus Vilhena. Atua com Engenharia de Software, Programação e Sistemas de Informação para conectar pesquisa aplicada e formação de talentos.";
+  "Atua com Engenharia de Software, Programação e Sistemas de Informação para conectar pesquisa aplicada e formação de talentos.";
 
 const socialLinks = [
   { href: "https://github.com/marcoaugustoandrade", label: "GitHub", Icon: Github },
@@ -15,62 +17,86 @@ const socialLinks = [
   },
 ];
 
+const institutionLinks = [
+  { href: "https://portal.ifro.edu.br", label: "IFRO" },
+  { href: "https://fslab.ifro.edu.br", label: "FSLab" },
+];
+
+const focusRing =
+  "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#3F487A]";
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-gradient-to-br from-[#392C59] via-[#3F487A] to-[#3A6193] px-4 py-16 text-gray-50">
-      <div className="mx-auto flex max-w-3xl flex-col items-center gap-4 text-center px-4">
-        <div className="group relative mb-4 h-36 w-36 transform transition duration-500 hover:scale-105 sm:h-48 sm:w-48">
-          <div className="absolute inset-0 rounded-full bg-[#3A6193]/40 blur-2xl transition group-hover:bg-[#4ad1ff]/40" />
-          <div className="absolute -inset-3 rounded-full border border-white/20 opacity-60 transition group-hover:opacity-90" aria-hidden />
-          <div className="absolute -inset-1 rounded-full border border-white/60 opacity-80 transition group-hover:border-white" aria-hidden />
+    <main className="relative flex min-h-screen items-center justify-center bg-gradient-to-br from-[#392C59] via-[#3F487A] to-[#3A6193] px-6 py-10 text-gray-50">
+      <div className="mx-auto flex w-full max-w-xl flex-col items-center text-center">
+        <div className="group relative h-36 w-36 sm:h-40 sm:w-40">
+          <div
+            className="absolute -inset-4 rounded-full bg-sky-300/25 blur-2xl transition-colors duration-500 group-hover:bg-sky-300/40 motion-reduce:transition-none"
+            aria-hidden
+          />
+          <div
+            className="absolute -inset-1 rounded-full border border-white/40 transition-colors duration-500 group-hover:border-sky-200/80 motion-reduce:transition-none"
+            aria-hidden
+          />
           <Image
             src="/marco.png"
             alt="Foto de Marco Andrade"
             width={200}
             height={200}
             priority
-            className="relative rounded-full border border-white/40 object-cover transition duration-500 group-hover:brightness-110"
+            className="relative h-full w-full rounded-full object-cover"
           />
         </div>
-        <h1 className="mt-2 text-4xl font-semibold tracking-tight text-white drop-shadow-[0_8px_18px_rgba(0,0,0,0.45)]">
+
+        <h1 className="mt-8 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
           Marco Andrade
         </h1>
-        <p className="mt-2 text-base leading-relaxed text-white/80">{summary}</p>
-        <div className="mt-2 h-px w-16 rounded-full bg-white/40" aria-hidden />
+        <p className="mt-3 text-sm font-medium uppercase tracking-[0.2em] text-sky-200/90">
+          {role}
+        </p>
+        <p className="mt-5 max-w-md text-balance text-lg leading-relaxed text-white/75">
+          {summary}
+        </p>
 
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-4">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <Link
             href="mailto:marco.andrade@ifro.edu.br"
-            className="inline-flex items-center gap-2 rounded-full bg-white/90 px-6 py-3 text-sm font-semibold text-[#1f1a2c] transition hover:-translate-y-0.5 hover:bg-white"
+            className={`inline-flex h-12 items-center gap-2 rounded-full bg-white px-6 text-sm font-semibold text-[#1f1a2c] shadow-lg shadow-black/20 transition hover:-translate-y-0.5 hover:bg-sky-100 motion-reduce:transition-none motion-reduce:hover:translate-y-0 ${focusRing}`}
           >
-            <Mail className="h-4 w-4" />
+            <Mail className="h-4 w-4" aria-hidden />
             Contato
           </Link>
+
+          <div className="flex items-center gap-1">
+            {socialLinks.map(({ href, label, Icon }) => (
+              <Link
+                key={label}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={label}
+                title={label}
+                className={`inline-flex h-12 w-12 items-center justify-center rounded-full text-white/80 transition hover:-translate-y-0.5 hover:bg-white/10 hover:text-sky-200 motion-reduce:transition-none motion-reduce:hover:translate-y-0 ${focusRing}`}
+              >
+                <Icon className="h-5 w-5" aria-hidden />
+              </Link>
+            ))}
+          </div>
         </div>
 
-        <div className="mt-8 flex items-center gap-3 text-sm text-white/70">
-          <Link href="https://portal.ifro.edu.br" target="_blank" className="transition hover:-translate-y-0.5 hover:text-yellow-200">
-            IFRO
-          </Link>
-          <span className="opacity-50">•</span>
-          <Link href="https://fslab.ifro.edu.br" target="_blank" className="transition hover:-translate-y-0.5 hover:text-yellow-200">
-            FSLab
-          </Link>
-        </div>
-
-        <div className="mt-6 flex gap-6">
-          {socialLinks.map(({ href, label, Icon }) => (
+        <nav aria-label="Instituições" className="mt-8 flex items-center gap-2">
+          {institutionLinks.map(({ href, label }) => (
             <Link
               key={label}
               href={href}
               target="_blank"
-              aria-label={label}
-              className="text-white/80 transition hover:-translate-y-0.5 hover:text-yellow-200"
+              rel="noopener noreferrer"
+              className={`rounded-full border border-white/15 px-4 py-1.5 text-xs font-medium tracking-wide text-white/70 transition hover:border-sky-200/60 hover:text-sky-200 motion-reduce:transition-none ${focusRing}`}
             >
-              <Icon className="h-5 w-5" />
+              {label}
             </Link>
           ))}
-        </div>
+        </nav>
       </div>
     </main>
   );
