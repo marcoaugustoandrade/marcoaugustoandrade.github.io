@@ -3,9 +3,8 @@ import Link from "next/link";
 import { Github, Gitlab, Linkedin, Mail } from "lucide-react";
 
 const role = "Professor EBTT · IFRO Campus Vilhena";
-
-const summary =
-  "Atua com Engenharia de Software, Programação e Sistemas de Informação para conectar pesquisa aplicada e formação de talentos.";
+const ifroUrl = "https://portal.ifro.edu.br";
+const fslabUrl = "https://fslab.ifro.edu.br";
 
 const socialLinks = [
   { href: "https://github.com/marcoaugustoandrade", label: "GitHub", Icon: Github },
@@ -15,11 +14,6 @@ const socialLinks = [
     label: "LinkedIn",
     Icon: Linkedin,
   },
-];
-
-const institutionLinks = [
-  { href: "https://portal.ifro.edu.br", label: "IFRO" },
-  { href: "https://fslab.ifro.edu.br", label: "FSLab" },
 ];
 
 const focusRing =
@@ -51,11 +45,28 @@ export default function Home() {
         <h1 className="mt-8 text-4xl font-semibold tracking-tight text-white sm:text-5xl">
           Marco Andrade
         </h1>
-        <p className="mt-3 text-sm font-medium uppercase tracking-[0.2em] text-sky-200/90">
-          {role}
+        <p className="mt-3 text-sm font-medium uppercase tracking-[0.2em]">
+          <Link
+            href={ifroUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`rounded-sm text-sky-200/90 transition hover:text-sky-100 motion-reduce:transition-none ${focusRing}`}
+          >
+            {role}
+          </Link>
         </p>
         <p className="mt-5 max-w-md text-balance text-lg leading-relaxed text-white/75">
-          {summary}
+          Atua no{" "}
+          <Link
+            href={fslabUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`rounded-sm font-medium text-white underline decoration-sky-300/60 underline-offset-4 transition hover:decoration-sky-200 motion-reduce:transition-none ${focusRing}`}
+          >
+            FSLab
+          </Link>{" "}
+          com Engenharia de Software, Programação e Sistemas de Informação para
+          conectar pesquisa aplicada e formação de talentos.
         </p>
 
         <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
@@ -84,19 +95,6 @@ export default function Home() {
           </div>
         </div>
 
-        <nav aria-label="Instituições" className="mt-8 flex items-center gap-2">
-          {institutionLinks.map(({ href, label }) => (
-            <Link
-              key={label}
-              href={href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`rounded-full border border-white/15 px-4 py-1.5 text-xs font-medium tracking-wide text-white/70 transition hover:border-sky-200/60 hover:text-sky-200 motion-reduce:transition-none ${focusRing}`}
-            >
-              {label}
-            </Link>
-          ))}
-        </nav>
       </div>
     </main>
   );
