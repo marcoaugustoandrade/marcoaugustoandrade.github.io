@@ -18,17 +18,10 @@ export const metadata = {
   },
   icons: {
     icon: [
-      {
-        media: '(prefers-color-scheme: light)',
-        url: '/favicon.png',
-        href: '/favicon.png',
-      },
-      {
-        media: '(prefers-color-scheme: dark)',
-        url: '/favicon.png',
-        href: '/favicon.png',
-      },
+      { url: "/favicon.ico", sizes: "16x16 32x32 48x48 64x64" },
+      { url: "/favicon.png", type: "image/png", sizes: "512x512" },
     ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180" }],
   },
 };
 
