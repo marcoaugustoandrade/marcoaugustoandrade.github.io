@@ -16,6 +16,8 @@ const socialLinks = [
   },
 ];
 
+const NewTab = () => <span className="sr-only"> (abre em nova aba)</span>;
+
 const focusRing =
   "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-300 focus-visible:ring-offset-2 focus-visible:ring-offset-[#3F487A]";
 
@@ -50,20 +52,22 @@ export default function Home() {
             href={ifroUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`rounded-sm text-sky-200/90 transition hover:text-sky-100 motion-reduce:transition-none ${focusRing}`}
+            className={`rounded-sm text-sky-100 transition hover:text-white motion-reduce:transition-none ${focusRing}`}
           >
             {role}
+            <NewTab />
           </Link>
         </p>
-        <p className="mt-5 max-w-md text-balance text-lg leading-relaxed text-white/75">
+        <p className="mt-5 max-w-md text-balance text-lg leading-relaxed text-white/85">
           Atua no{" "}
           <Link
             href={fslabUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className={`rounded-sm font-medium text-white underline decoration-sky-300/60 underline-offset-4 transition hover:decoration-sky-200 motion-reduce:transition-none ${focusRing}`}
+            className={`rounded-sm font-medium text-white underline decoration-sky-300 underline-offset-4 transition hover:decoration-white motion-reduce:transition-none ${focusRing}`}
           >
             FSLab
+            <NewTab />
           </Link>{" "}
           com Engenharia de Software, Programação e Sistemas de Informação para
           conectar pesquisa aplicada e formação de talentos.
@@ -85,11 +89,13 @@ export default function Home() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label={label}
-                title={label}
                 className={`inline-flex h-12 w-12 items-center justify-center rounded-full text-white/80 transition hover:-translate-y-0.5 hover:bg-white/10 hover:text-sky-200 motion-reduce:transition-none motion-reduce:hover:translate-y-0 ${focusRing}`}
               >
                 <Icon className="h-5 w-5" aria-hidden />
+                <span className="sr-only">
+                  {label}
+                  <NewTab />
+                </span>
               </Link>
             ))}
           </div>
